@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../materialize/css/materialize.css">
+   <link rel="stylesheet" href="materialize/css/materialize.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <title>Document</title>
+      
+</head>
+<body>
+    <style>
+        input{
+            border-bottom: none !important;
+        }
+        @font-face{
+            font-family:Tenor;
+            src:url('font/TenorSans-Regular.ttf');
+        }
+    </style> 
+    <div class="js hide-on-large-only hide-on-med-only" id="load_mobile" style="width:100%;">
+        <div style="background-color: white;width: 100%;height: 100%;position: fixed;z-index: 99;"><div style="margin-left: 45%;"></div>
+            <div class="loader" style="position: fixed;margin-top: 50%;z-index: 999;margin-left: 45%;">
+                <span>Loading...</span>
+            </div>
+        </div>
+    
+    </div>
+    <div class="js hide-on-small-only hide-on-med-only" id="load_large" style="width:100%;">
+        <div style="background-color:white;width: 100%;height: 100%;position: fixed;z-index: 99;"></div>
+        <div style="margin-left:45%">
+        <div class="loader" style="position: fixed;z-index: 999;top:40%">
+            <span>Loading...</span>
+        </div>
+    </div>
+    </div>
+    <div class="js hide-on-small-only hide-on-large-only" id="load_med" style="width:100%;">
+       <div style="background-color: white;width: 100%;height: 100%;position: fixed;z-index: 99;">
+            <div class="loader" style="position: fixed;margin-top: 30%;z-index: 999; margin-left: 45%;">
+                <span>Loading...</span>
+            </div>
+       </div>
+    
+    </div>
+<script>
+
+    function stop(){
+       var load =  document.getElementById('load_mobile');  
+       load.style.display='none';
+    }
+    function run(){
+    setTimeout(stop,3000);
+    }
+    run();
+    function stop_1(){
+       var load =  document.getElementById('load_large');  
+       load.style.display='none';
+    }
+    function run_1(){
+    setTimeout(stop_1,3000);
+    }
+    run_1();
+    function stop_2(){
+       var load =  document.getElementById('load_med');  
+       load.style.display='none';
+    }
+    function run_2(){
+    setTimeout(stop_2,3000);
+    }
+    run_2();
+</script>
+   <section>
+       <div style="position: fixed;width: 100%; z-index: 9;">
+            <nav class="white black-text">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a class="black-text left" style="margin-top: 0px;">Phone:+234 8164602766</a>
+                        </li>
+                        <li class="right">
+                            <i class="material-icons">local_grocery_store</i>
+                        </li>
+                        <li>
+                            <i class="material-icons"></i>
+                        </li>
+                    </ul>
+                </div>    
+            </nav>
+            <nav class="blue ">
+                <div class="container">
+                    <a href="#mobile-menu" class="sidenav-trigger">
+                        <i class="material-icons black;">menu</i>
+                    </a>
+                    <a href="">MEDICAL EQUIPMENT</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="loader.html">Home</a></li>
+                        <li><a href="">Collection</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">About</a></li>
+                        <li>
+                            <div class="drop">
+                                <button class="dropbtn transparent" style="font-family: 'Century Gothic' !important;">Services</button>
+                                <div class="drop-content">
+                                  <a href="#">Link 1</a>
+                                  <a href="#">Link 2</a>
+                                  <a href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div> 
+            </nav>        
+       </div>
+           
+        
+        <div class=" hide-on-large-only">
+            
+            <ul class="sidenav" id="mobile-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Collection</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">About</a></li>
+                <li>
+                    <div class="drop">
+                        <button  class="dropbtn service">Services</button>
+                        <div class="drop-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>   
+        <div>
+            <ul class="sidenav white" id="mobile-menu" style="z-index: 999;">
+                <li ><a href=""class="black-text ">HOME</a></li>
+                <li><a href=""class="black-text">ABOUT</a></li>
+                <li><a href=""class="black-text">SERVICE</a></li>
+                <li><a href=""class="black-text">CONTACT</a></li>
+            </ul>
+        </div>   
+   </section><br><br><br><br><br>
+
+   <section class="Home">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <p style="margin-top: 100px; width: 70%; padding: 10px;" class="blue white-text">Lorem ipsum dolor sit consectetur </p>
+                <h2 style="font-weight: bold;">Virus protection</h2>
+                <p style="line-height: 1.7rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptatibus earum? Nulla, blanditiis alias. Mollitia laborum neque corporis cupiditate facilis.</p>
+                <button style="border-radius: 20px; text-transform: none;" class="btn blue">Shop Now</button>
+            </div>
+            <div class="col s12 m6 l6">
+                <img style="margin-top: 100px;" src="img/hypertension-867855_1280-removebg-preview.png"  class="responsive-img" alt="">
+            </div>
+        </div>
+    </div>
+   </section>
+    
+   <section>
+        <div class="container">
+            <div class="center">
+                <h3 style="font-weight: bold;" class="blue-text">New Arrivals</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi debitis, quam veritatis ratione porro ipsam.</p>
+            </div>
+            <div class="row">
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/diabetes-1724617_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p style="font-size: 12px; font-weight:bold;">Sugar level tester</p>
+                                <p style="font-size: 12px; font-weight:bold;" class="blue-text">$1165</p>
+                                <button style="text-transform: none;" class="btn blue">cart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/blood-pressure-1006791_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p style="font-size: 12px; font-weight:bold;">Blood pressure</p>
+                                <p style="font-size: 12px; font-weight:bold;" class="blue-text">$1165</p>
+                                <button style="text-transform: none;" class="btn blue">cart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/ffp2-5961013_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p style="font-size: 12px; font-weight:bold;">Safty Mask</p>
+                                <p style="font-size: 12px; font-weight:bold;" class="blue-text">$1165</p>
+                                <button style="text-transform: none;" class="btn blue">cart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/medical-1006788_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p style="font-size: 12px; font-weight:bold;">Stethososcop</p>
+                                <p style="font-size: 12px; font-weight:bold;" class="blue-text">$1165</p>
+                                <button style="text-transform: none;" class="btn blue">cart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+   </section>
+
+    <section style="height: 80%;" class="flatoff blue">
+      <div class="container center"><br>
+            <div style="border: soli;width: 60%; height: 20%; margin-left: 20%;" class="white center z-depth-2">
+                <h4 style="font-weight: bold;padding-top: 50px;">Flat 50% Off</h4>
+                <p>Lorem</p>
+                <p style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque totam nisi corrupti iusto, repellat dolore enim soluta natus. Molestiae fugit blanditiis officia et at doloribus eligendi voluptates repellat obcaecati maiores!</p>
+                <button style="margin-bottom: 50px;border-radius: 20px;text-transform: none;" class="btn blue">Buy Now</button>
+            </div><br><br>
+      </div>  
+    </section>
+    
+    <section class="protection">
+        <div class="container">
+            <div class="center">
+                <h4 style="font-weight: bold;" class="blue-text">Self Protection Kit</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum vel quibusdam corrupti nam necessitatibus ipsum.</p>
+            </div>
+            <div class="row">
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/protective-suit-5716753_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6 style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                               
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img  src="img/hand-sanitizer-4955418_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/face-mask-5024701_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/doctor-5707722_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+            </div> <div class="row">
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/bandage-2671511_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/red-condoms-849407_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/covid-5288310_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m3 l3">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/hd-wallpaper-4954957_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h6  style="font-weight: bold; font-size: 12px;">Plastic face sheild</h6>
+                                <div>
+                                    <span style="text-decoration: line-through;font-size: 12px;"> $116</span><span class="blue-text" style="font-size: 12px;">&nbsp; &nbsp; $100</span>
+                                </div>
+                                <i style="margin-left: 5px; margin-top: 10px; position: absolute;font-size: 18px;" class="material-icons white-text">local_grocery_store</i>
+                               <button style="text-transform: none;font-size: 18px;padding: 0px 5px 5px 25px;" class="btn blue "> chart</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="review">
+        <div class="container">
+            <div class="center">
+                <h4 style="font-weight: bold;" class="blue-text">Customer Review</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, perferendis! Veniam inventore ab impedit officia!</p>
+            </div>
+            <div class="">
+                <!-- Setup html owcarousel -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div>
+                            <div style="width: 100%;" class="white black-text z-depth-3">
+                                <p style="font-size: 14px; padding: 30px 20px 40px 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio eius sint voluptatum fuga dolores sed officia non sapiente a aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia assumenda nostrum blanditiis veniam nulla tempora impedit explicabo unde, consequatur quae!</p>
+                            </div>
+                            <img style="width: 90px; height: 90px; margin-top: -30px; margin-left: 50px; object-fit:cover;" src="img/black-professional-4334648_1280.jpg" alt="" class="circle responsive-img">
+                            <div style="margin-left: 150px; margin-top:-60px;font-size: 14px;">
+                                <p style="font-weight:bold">John Micheal</p>
+                                <p style="margin-top: -15px;">Manager</p>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <div style="width: 100%;" class="white black-text z-depth-3">
+                                <p style="font-size: 14px; padding: 30px 20px 40px 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio eius sint voluptatum fuga dolores sed officia non sapiente a aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia assumenda nostrum blanditiis veniam nulla tempora impedit explicabo unde, consequatur quae!</p>
+                            </div>
+                            <img style="width: 90px; height: 90px; margin-top: -30px; margin-left: 50px; object-fit:cover;" src="img/57c1f6554a1bc6282237ae99859a39e7.jpg" alt="" class="circle responsive-img">
+                            <div style="margin-left: 150px; margin-top:-60px;font-size: 14px;">
+                                <p style="font-weight:bold">John Micheal</p>
+                                <p style="margin-top: -15px;">Manager</p>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div style="width: 100%;">
+                            <div style="width: 100%;" class="white black-text z-depth-3">
+                                <p style="font-size: 14px; padding: 30px 20px 40px 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio eius sint voluptatum fuga dolores sed officia non sapiente a aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia assumenda nostrum blanditiis veniam nulla tempora impedit explicabo unde, consequatur quae!</p>
+                            </div>
+                            <img style="width: 90px; height: 90px; margin-top: -30px; margin-left: 50px; object-fit:cover;" src="img/model-in-gold-fashion.jpg" alt="" class="circle responsive-img">
+                            <div style="margin-left: 150px; margin-top:-60px;font-size: 14px;">
+                                <p style="font-weight:bold">John Micheal</p>
+                                <p style="margin-top: -15px;">Manager</p>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+            
+        </div>
+    </section>
+
+    <section class="update">
+        <div class="container">
+            <div class="center">
+                <h4 style="font-weight: bold;" class="blue-text">Latest Update</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti accusantium veritatis error sequi facilis inventore ad reprehenderit quam dolores ratione?</p>
+            </div>
+            </div> <div class="row container">
+                <div class="col s12 m4 l4">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/microscope-275984_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p class="blue-text">20th August 2022</p>
+                                <h6 style="font-weight: bold;">Consectetur Adipisicing</h6>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nobis corrupti cupiditate culpa consectetur non explicabo eius error omnis eum.</p>
+                                <i style="position: absolute; margin-top: 8px;margin-left: 5px;font-size: 20px;" class="material-icons white-text">share</i>
+                                <button style="padding: 0px 5px 5px 30px; text-transform: none;" class="btn blue ">Share</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m4 l4">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/pharmacy-3087599_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p class="blue-text">20th August 2022</p>
+                                <h6 style="font-weight: bold;">Consectetur Adipisicing</h6>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nobis corrupti cupiditate culpa consectetur non explicabo eius error omnis eum.</p>
+                                <i style="position: absolute; margin-top: 8px;margin-left: 5px;font-size: 20px;" class="material-icons white-text">share</i>
+                                <button style="padding: 0px 5px 5px 30px; text-transform: none;" class="btn blue ">Share</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                <div class="col s12 m4 l4">
+                    <ul class="card">
+                        <li>
+                            <div class="card-img">
+                                <img src="img/hospital-4904920_1280.jpg" class="responsive-img materialboxed" alt="">
+                            </div>
+                            <div class="card-content">
+                                <p class="blue-text">20th August 2022</p>
+                                <h6 style="font-weight: bold;">Consectetur Adipisicing</h6>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nobis corrupti cupiditate culpa consectetur non explicabo eius error omnis eum.</p>
+                                <i style="position: absolute; margin-top: 8px;margin-left: 5px;font-size: 20px;" class="material-icons white-text">share</i>
+                                <button style="padding: 0px 5px 5px 30px; text-transform: none;" class="btn blue ">Share</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="owl-carousel" id="owl">
+        
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+            <div> <img src="img/health-logo-design-template-09c31845ee73c777541135cadffe488d_screen.jpg" alt=""> </div>
+        
+        </div>
+
+    </div>
+    <section class="footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l4 m4 white-text">
+                    <p>MEDICAL EQUIPMENT</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis explicabo quidem similique quos optio quasi!</p>
+                </div>
+                <div class="col s12 l2 m2">
+                   
+                    <ul style="font-size: 12px;">
+                        <p class="white-text">Useful links</p>
+                        <li>
+                            <!-- <a href=""><i style="font-size: 12px;" class="material-icons">chevron_right</i> Home</a> -->
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Home</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Collection</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Shop</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">About</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Services</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Pages</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Blog</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Contact</a></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s12 l2 m2">
+                    
+                    <ul style="font-size: 12px;">
+                        <p class="white-text">Categories</p>
+                        <li>
+                            <i style="font-size: 18px;" class="material-icons blue-text ">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a  href="loader.html" class="white-text">Face mask</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Hand glove</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Eye Protection</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Sanitizar</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Condom</a></div>
+                        </li><br>
+                        <li style="margin-top: -15px;">
+                            <i style="font-size: 18px;"  class="material-icons blue-text">chevron_right
+                            </i>
+                            <div style="margin-top: -23px;margin-left: 20px;"><a href="loader.html" class="white-text">Nose mask</a></div>
+                        </li><br>
+                       
+                    </ul>
+                </div>
+               
+                <div class="col s12 l4 m4 white-text">
+                    <p>News Letter</p>
+                    <p>sign up for newsletter</p>
+                    <!-- <div style="border: solid; width: 200px;height: 25px;border-radius: 10px; background-color: white;">
+                        <p style="font-weight:lighter;margin-top: -10px;" class="black-text">enter your email</p>
+                    </div> -->
+                    <form action="" class="hide-on-med-only">
+                        <input style="font-weight: lighter; width: 60%;border: solid; height: 35px;background-color: white;border-top-left-radius: 20px; border-bottom-left-radius: 20px; padding-left: 20px;" type="text" placeholder="Enter your email" class="black-text">
+                        <button style="margin-top: -77px; margin-left: 170px; padding-bottom: 5px; border-bottom-right-radius: 20px; border-top-right-radius: 20px; text-transform: none;" type="submit" class="btn blue">Subscribe</button>
+                        
+                    </form>
+                    <form action="" class="hide-on-large-only hide-on-small-only">
+                        <input style="font-weight: lighter; width: 62%;border: solid; height: 35px;background-color: white;border-top-left-radius: 20px; border-bottom-left-radius: 20px; padding-left: 20px;" type="text" placeholder="Enter your email" class="black-text">
+                        <button style="margin-top: -77px; margin-left: 170px; padding-bottom: 5px; border-bottom-right-radius: 20px; border-top-right-radius: 20px; text-transform: none;" type="submit" class="btn blue">Subscribe</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div><br><br>
+    </section>
+
+    <script src="../materialize/js/jquery.js"></script>
+    <script src="../materialize/js/materialize.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+            })
+        });
+
+
+        var owl = $('#owl');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+</script>
+<script>
+    //PUT THIS OR INTO A .JS FILE OR IN THE SCRIPT TAG IN THE HTML HEAD.
+    jQuery(document).ready(function($) {  
+
+    $(window).load(function(){
+        $('#preloader').fadeOut('slow',function(){$(this).remove();});
+    });
+
+    });
+
+    jQuery(document).ready(function($) {  
+
+    $(window).load(function(){
+        $('#preloader').fadeOut('slow',function(){$(this).remove();});
+    });
+
+    });
+</script>
+</body>
+</html>
